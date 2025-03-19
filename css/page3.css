@@ -55,6 +55,7 @@
       .upload-box:hover {
           background: rgba(0, 188, 212, 0.1);
       }
+    
 
 
       /* Buttons */
@@ -128,6 +129,11 @@
           transform: translateX(0);
           opacity: 1;
       }
+
+
+
+
+
 
       /* Right Section: Product Card */
 

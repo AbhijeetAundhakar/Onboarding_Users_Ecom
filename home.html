@@ -10,300 +10,465 @@
     <!-- <link rel="stylesheet" href="/css/home.css"> -->
 
     <style>
-         body {
-     font-family: Arial, sans-serif;
-     margin: 0;
-     padding: 0;
-     background-color: #f8f9fa;
- }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
 
- /* Header */
- .header {
-     background-color: #ff6f61;
-     color: white;
-     padding: 20px;
-     text-align: center;
- }
+        /* Header */
+        .header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
- .header h1 {
-     margin: 0;
-     font-size: 2.5rem;
- }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
- /* Navigation Bar */
- /* Navigation Bar */
- .navbar {
-     background-color: #333;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 10px 20px;
- }
+        /* Navigation Bar */
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
 
- /* Navigation Links */
- .nav-links {
-     display: flex;
- }
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+        }
 
- .navbar a {
-     color: white;
-     text-decoration: none;
-     padding: 10px 15px;
- }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
 
- .navbar a:hover {
-     background-color: #575757;
- }
+        .navbar a:hover {
+            background-color: #575757;
+            transition: .5s;
+            border-radius: 24px;
+        }
 
- /* Search Bar */
- .search-bar {
-     display: flex;
-     gap: 20px;
- }
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            gap: 20px;
+        }
 
- .search-input {
-     padding: 8px;
-     border: 1px solid #ccc;
-     border-radius: 35px;
-     outline: 0;
-     width: 230px;
- }
+        .search-input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 35px;
+            outline: 0;
+            width: 230px;
+        }
 
- .search-btn {
-     padding: 8px 12px;
-     background-color: #575757;
-     color: white;
-     border: none;
-     border-radius: 5px;
-     cursor: pointer;
- }
+        .search-btn {
+            padding: 8px 12px;
+            background-color: #575757;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
- .search-btn:hover {
-     background-color: #777;
- }
+        .search-btn:hover {
+            background-color: #777;
+        }
 
- /* Hero Section */
- .hero-section {
-     background: url('hero-bg.jpg') no-repeat center center/cover;
-     color: rgb(114, 113, 113);
-     padding: 100px 20px;
-     text-align: center;
- }
+        /* Hero Section */
+        .hero-section {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: rgb(114, 113, 113);
+            padding: 100px 20px;
+            text-align: center;
+        }
 
- .hero-section h2 {
-     font-size: 3rem;
-     font-weight: 600;
-     /* text-transform: uppercase; */
-     margin-bottom: 20px;
- }
+        .hero-section h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            /* text-transform: uppercase; */
+            margin-bottom: 20px;
+        }
 
- .hero-section p {
-     font-size: 1.2rem;
-     margin-bottom: 30px;
- }
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
 
- .hero-section .btn {
-     background-color: #ff6f61;
-     color: white;
-     padding: 10px 20px;
-     border-radius: 5px;
-     text-decoration: none;
-     font-size: 1.1rem;
- }
+        .hero-section .btn {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
- .hero-section .btn:hover {
-     background-color: #ff3b2f;
- }
+        .shop-now-btn {
+            background-color: transparent;
+            color: #ff6f61;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: 2px solid #ff6f61;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
 
- /* Product Categories */
- .categories {
-     padding: 40px 20px;
-     text-align: center;
- }
+        .hero-section .shop-now-btn:hover {
+            background-color: #ff3b2f;
+            transition: .3s;
+            text-decoration: none;
+            color: white;
+        }
 
- .categories h2 {
-     font-size: 2rem;
-     margin-bottom: 20px;
- }
 
- .category-card {
-     background: white;
-     border-radius: 10px;
-     padding: 5px;
-     margin: 10px;
-     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-     transition: transform 0.3s ease-in-out;
- }
+        .hero-section .btn:hover {
+            background-color: #ff3b2f;
+        }
 
- .category-card:hover {
-     transform: scale(1.05);
- }
+        /* Product Categories */
+        .categories {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
- .category-card img {
-     max-width: 100%;
-     height: 11rem;
-     border-radius: 10px;
- }
-
- .category-card h3 {
-     font-size: 1.5rem;
-     margin: 15px 0;
- }
-
- .category-card p {
-     font-size: 1rem;
-     color: #666;
- }
+        .categories h2 {
+            font-size: 2rem;
+            margin-bottom: 0px;
+            font-weight: 900;
+            color: #6d6d6d;
+            opacity: 0;
+            /* Start with invisible text */
+            animation: fadeIn 2s ease-in-out forwards;
+            /* Apply fade-in animation */
+        }
 
 
 
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: slideDown 0.8s ease-out forwards;
+        }
 
- /* Deals Section */
- .deals-section {
-     background-color: #f1f1f1;
-     padding: 40px 20px;
-     text-align: center;
- }
+        /* Delay animations for each card */
+        .row .col-md-4:nth-child(1) .category-card {
+            animation-delay: 0.3s;
+            /* First card appears after 0.2s */
+        }
 
- .deals-section h2 {
-     font-size: 2rem;
-     margin-bottom: 20px;
- }
+        .row .col-md-4:nth-child(2) .category-card {
+            animation-delay: 0.6s;
+            /* Second card appears after 0.4s */
+        }
 
- .deals-section .btn {
-     background-color: #ff6f61;
-     color: white;
-     padding: 10px 20px;
-     border-radius: 5px;
-     text-decoration: none;
-     font-size: 1.1rem;
- }
+        .row .col-md-4:nth-child(3) .category-card {
+            animation-delay: .9s;
+            /* Third card appears after 0.6s */
+        }
 
- .deals-section .btn:hover {
-     background-color: #ff3b2f;
- }
+        .category-card:hover {
+            transform: scale(1.05);
+        }
 
- /* Footer */
- .footer {
-     background-color: #333;
-     color: white;
-     padding: 20px;
-     text-align: center;
- }
+        .category-card img {
+            max-width: 100%;
+            height: 11rem;
+            border-radius: 10px;
+        }
 
- .footer a {
-     color: #ff6f61;
-     text-decoration: none;
- }
+        .category-card h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
 
- .footer a:hover {
-     text-decoration: underline;
- }
+        .category-card p {
+            font-size: 1rem;
+            color: #666;
+        }
 
- /* Responsive Design */
- @media (max-width: 768px) {
-     .hero-section h2 {
-         font-size: 2rem;
-     }
+        /* Slide-Down Animation */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+                /* Start above */
+            }
 
-     .hero-section p {
-         font-size: 1rem;
-     }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                /* Slide to original position */
+            }
+        }
 
-     .category-card h3 {
-         font-size: 1.2rem;
-     }
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                /* Start fully transparent */
+            }
 
-     .category-card p {
-         font-size: 0.9rem;
-     }
-
-
-     .search-bar {
-         gap: 10px;
-     }
-
-     .search-input {
-         width: 150px;
-         padding: 6px;
-     }
-
-     .search-btn {
-         padding: 6px 10px;
-         font-size: 0.9rem;
-     }
-
-
-
-                 .navbar {
-                     flex-direction: column;
-                     align-items: flex-start;
-                 }
-        
-                 .nav-links {
-                     flex-direction: column;
-                     width: 100%;
-                 }
-        
-                 .navbar a {
-                     padding: 10px;
-                     width: 100%;
-                     text-align: left;
-                 }
- }
+            to {
+                opacity: 1;
+                /* End fully visible */
+            }
+        }
 
 
-@media (max-width: 480px) {
-    .search-bar {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
+        /* SCROLL BAR */
 
-    .search-input {
-        width: 100%;
-        padding: 5px;
-    }
+        /* Custom Scrollbar for WebKit browsers */
+        body::-webkit-scrollbar {
+            width: 4px;
+        }
 
-    .search-btn {
-        width: 100%;
-        padding: 5px;
-    }
+        body::-webkit-scrollbar-track {
+            background: #c2bebe;
+            border-radius: 4px;
+        }
 
-         .navbar {
-             padding: 5px;
-         }
-    
-         .nav-links {
-             display: none;
-             flex-direction: column;
-             width: 100%;
-         }
-    
-         .navbar a {
-             padding: 8px;
-             font-size: 0.9rem;
-         }
-    
-         .navbar.active .nav-links {
-             display: flex;
-         }
-}
+        body::-webkit-scrollbar-thumb {
+            background: rgb(65, 64, 64);
+            border-radius: 4px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+            background: #e68900;
+        }
 
 
-@media (max-width: 1024px) {
-    .search-input {
-        width: 180px;
-    }
 
-                .navbar {
-                    padding: 10px;
-                }
-        
-                .navbar a {
-                    padding: 8px 12px;
-                }
-}
+        /* Deals Section */
+        .deals-section {
+            background-color: #f1f1f1;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .deals-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .deals-section .btn {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .deals-section .btn:hover {
+            background-color: #ff3b2f;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h2 {
+                font-size: 2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .category-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .category-card p {
+                font-size: 0.9rem;
+            }
+
+
+            .search-bar {
+                gap: 10px;
+            }
+
+            .search-input {
+                width: 150px;
+                padding: 6px;
+            }
+
+            .search-btn {
+                padding: 6px 10px;
+                font-size: 0.9rem;
+            }
+
+
+
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar a {
+                padding: 10px;
+                width: 100%;
+                text-align: left;
+            }
+
+
+            /* Category */
+
+            .categories h2 {
+                font-size: 1.6rem;
+                /* Smaller heading for tablets */
+            }
+
+            .category-card {
+                margin: 8px;
+                /* Reduce margin between cards */
+            }
+
+            .category-card h3 {
+                font-size: 1.2rem;
+                /* Smaller card title */
+            }
+
+            .category-card p {
+                font-size: 0.85rem;
+                /* Smaller card description */
+            }
+
+            .category-card img {
+                height: 9rem;
+                /* Smaller image height */
+            }
+        }
+
+
+        @media (max-width: 480px) {
+            .search-bar {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+
+            .search-input {
+                width: 100%;
+                padding: 5px;
+            }
+
+            .search-btn {
+                width: 100%;
+                padding: 5px;
+            }
+
+            .navbar {
+                padding: 5px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar a {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+
+            .navbar.active .nav-links {
+                display: flex;
+            }
+
+
+            /* Category */
+            .categories h2 {
+                font-size: 1.4rem;
+                /* Smaller heading for mobile */
+            }
+
+            .category-card {
+                margin: 5px;
+                /* Further reduce margin */
+            }
+
+            .category-card h3 {
+                font-size: 1.1rem;
+                /* Smaller card title */
+            }
+
+            .category-card p {
+                font-size: 0.8rem;
+                /* Smaller card description */
+            }
+
+            .category-card img {
+                height: 7rem;
+                /* Smaller image height */
+            }
+
+            .row.m-5 {
+                margin: 0 !important;
+                /* Remove extra margin on small screens */
+            }
+
+            .col-md-4 {
+                flex: 0 0 100%;
+                /* Stack cards vertically on small screens */
+                max-width: 100%;
+            }
+        }
+
+
+        @media (max-width: 1024px) {
+            .search-input {
+                width: 180px;
+            }
+
+            .navbar {
+                padding: 10px;
+            }
+
+            .navbar a {
+                padding: 8px 12px;
+            }
+
+            /* Category */
+        }
     </style>
 </head>
 
@@ -314,51 +479,51 @@
     </div>
 
     <!-- Navigation Bar -->
-<div class="navbar">
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Gaming Accessories</a>
-        <a href="#">Office Supplies</a>
-        <a href="#">Home Essentials</a>
-        <a href="#">Fashion</a>
-        <a href="#">Kitchen Appliances</a>
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Gaming Accessories</a>
+            <a href="#">Office Supplies</a>
+            <a href="#">Home Essentials</a>
+            <a href="#">Fashion</a>
+            <a href="#">Kitchen Appliances</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-btn">Search</button>
+        </div>
     </div>
-    <div class="search-bar">
-        <input type="text" class="search-input" placeholder="Search...">
-        <button class="search-btn">Search</button>
-    </div>
-</div>
 
 
     <!-- Hero Section -->
     <div class="hero-section">
         <h2>Shop the Best Deals</h2>
         <p>Discover our top picks for Easter gifts and more!</p>
-        <a href="#" class="btn">Shop Now</a>
+        <a href="#" class="shop-now-btn">Shop Now</a>
     </div>
 
     <!-- Product Categories -->
     <div class="categories">
         <h2>Explore Our Categories</h2>
         <div class="container">
-            <div class="row">
+            <div class="row m-5">
                 <div class="col-md-4">
                     <div class="category-card">
-                        <img src="3.jpg" alt="Gaming Accessories">
+                        <img src="5.jpg" alt="Gaming Accessories">
                         <h3>Gaming Accessories</h3>
                         <p>Shop the latest gaming keyboards, mice, and more.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="category-card">
-                        <img src="2.jpg" alt="Office Supplies">
+                        <img src="office3.jpg" alt="Office Supplies">
                         <h3>Office Supplies</h3>
                         <p>Upgrade your workspace with our premium office products.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="category-card">
-                        <img src="5.jpg" alt="Home Essentials">
+                        <img src="home.jpg" alt="Home Essentials">
                         <h3>Home Essentials</h3>
                         <p>Find everything you need to refresh your living space.</p>
                     </div>

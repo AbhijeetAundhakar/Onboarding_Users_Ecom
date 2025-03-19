@@ -12,327 +12,354 @@
     <!-- <link rel="stylesheet" href="/css/page3.css"> -->
 
     <style>
-              /* General Styling */
-      @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+        /* General Styling */
+        @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 
-      body {
-          background-color: #f8f9fa;
-          font-family: Arial, sans-serif;
-      }
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
 
-      /* Left Section: Form */
-      .form-section {
-        background: linear-gradient(to right, #ff7e5f, #ffb074);
-          color: white;
-          overflow-y: auto;
-          padding: 30px;
-      }
+        /* Left Section: Form */
+        .form-section {
+            background: linear-gradient(to right, #ff7e5f, #ffb074);
+            color: white;
+            overflow-y: auto;
+            padding: 30px;
+        }
 
-      .form-label {
-          color: rgb(48, 48, 48);
-      }
+        .form-label {
+            color: rgb(48, 48, 48);
+        }
 
-      .form-container {
-          background: white;
-          padding: 20px;
-          border-radius: 8px;
-          color: black;
-          max-height: 75vh;
-          overflow-y: auto;
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Input Fields */
-      .form-control {
-          border-radius: 8px;
-          padding: 10px;
-          border: 1px solid #ccc;
-          transition: all 0.3s ease-in-out;
-      }
-
-      .form-control:focus {
-          border: 1px solid #ff9800;
-          box-shadow: 0px 0px 5px rgba(255, 152, 0, 0.3);
-      }
-
-      /* Upload Box */
-      .upload-box {
-          border: 2px dashed #00bcd4;
-          padding: 20px;
-          text-align: center;
-          border-radius: 8px;
-          cursor: pointer;
-          transition: all 0.3s ease-in-out;
-      }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            color: black;
+            max-height: 75vh;
+            overflow-y: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            scrollbar-width: thin;
+            /* For Firefox */
+            scrollbar-color: #ff9800 #f1f1f1;
+            /* For Firefox */
+        }
 
 
-      .upload-box:hover {
-          background: rgba(0, 188, 212, 0.1);
-      }
+        /* SCROLL BAR */
+
+        /* Custom Scrollbar for WebKit browsers */
+        .form-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .form-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .form-container::-webkit-scrollbar-thumb {
+            background: #ff9800;
+            border-radius: 4px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .form-container::-webkit-scrollbar-thumb:hover {
+            background: #e68900;
+        }
+
+        /* Input Fields */
+        .form-control {
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-control:focus {
+            border: 1px solid #ff9800;
+            box-shadow: 0px 0px 5px rgba(255, 152, 0, 0.3);
+        }
+
+        /* Upload Box */
+        .upload-box {
+            border: 2px dashed #00bcd4;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
 
 
-      /* Buttons */
-      .back-btn,
-      .next-btn {
-          font-size: 1.1rem;
-          padding: 10px 50px;
-          border-radius: 50px;
-          font-weight: bold;
-          transition: all 0.3s ease-in-out;
-      }
-
-      .back-btn {
-          /* background-color: transparent; */
-          color: black;
-          border: 2px solid rgb(138, 138, 138);
-      }
-
-      .back-btn:hover {
-          background-color: #b3b3b3;
-      }
-
-      .next-btn {
-          background-color: transparent;
-          border: 2px solid #ff9800;
-          color: #ff9800;
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          position: relative;
-          overflow: hidden;
-      }
+        .upload-box:hover {
+            background: rgba(0, 188, 212, 0.1);
+        }
 
 
-      .back-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          position: relative;
-          overflow: hidden;
-      }
+        /* Buttons */
+        .back-btn,
+        .next-btn {
+            font-size: 1.1rem;
+            padding: 10px 50px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
 
-      .next-btn .icon {
-          font-family: 'Material Icons';
-          font-size: 1.5rem;
-          transform: translateX(-10px);
-          opacity: 0;
-          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      }
+        .back-btn {
+            /* background-color: transparent; */
+            color: black;
+            border: 2px solid rgb(138, 138, 138);
+        }
 
+        .back-btn:hover {
+            background-color: #b3b3b3;
+        }
 
-      .back-btn .icon {
-          font-family: 'Material Icons';
-          font-size: 1.5rem;
-          transform: translateX(-10px);
-          opacity: 0;
-          transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      }
-
-      .next-btn:hover {
-          background-color: #ff9800;
-          color: white;
-      }
-
-      .next-btn:hover .icon {
-          transform: translateX(0);
-          opacity: 1;
-      }
-
-      .back-btn:hover .icon {
-          transform: translateX(0);
-          opacity: 1;
-      }
-
-      /* Right Section: Product Card */
+        .next-btn {
+            background-color: transparent;
+            border: 2px solid #ff9800;
+            color: #ff9800;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
 
 
-          /* Image Container Styling */
-          .image-container {
-              width: 100%;
-              /* Full width of the card */
-              height: 200px;
-              /* Fixed height for the image container */
-              background-color: #f0f0f0;
-              /* Light gray background as a placeholder */
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border-radius: 8px;
-              /* Rounded corners */
-              overflow: hidden;
-              /* Ensure the image stays within the container */
-          }
-    
-          /* Default Image Styling */
-          .default-image {
-              width: 100%;
-              /* Full width of the container */
-              height: 100%;
-              /* Full height of the container */
-              object-fit: cover;
-              /* Ensures the image covers the container without distortion */
-          }
-    
-          /* If no image is uploaded, show a placeholder icon */
-          .image-container:empty::before {
-              content: "\f03e";
-              /* Font Awesome image icon (you need Font Awesome for this) */
-              font-family: "Font Awesome 5 Free";
-              font-weight: 900;
-              font-size: 40px;
-              color: #ccc;
-              /* Light gray color for the icon */
-          }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .next-btn .icon {
+            font-family: 'Material Icons';
+            font-size: 1.5rem;
+            transform: translateX(-10px);
+            opacity: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+
+        .back-btn .icon {
+            font-family: 'Material Icons';
+            font-size: 1.5rem;
+            transform: translateX(-10px);
+            opacity: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .next-btn:hover {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        .next-btn:hover .icon {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .back-btn:hover .icon {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* Right Section: Product Card */
+
+
+        /* Image Container Styling */
+        .image-container {
+            width: 100%;
+            /* Full width of the card */
+            height: 200px;
+            /* Fixed height for the image container */
+            background-color: #f0f0f0;
+            /* Light gray background as a placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            /* Rounded corners */
+            overflow: hidden;
+            /* Ensure the image stays within the container */
+        }
+
+        /* Default Image Styling */
+        .default-image {
+            width: 100%;
+            /* Full width of the container */
+            height: 100%;
+            /* Full height of the container */
+            object-fit: cover;
+            /* Ensures the image covers the container without distortion */
+        }
+
+        /* If no image is uploaded, show a placeholder icon */
+        .image-container:empty::before {
+            content: "\f03e";
+            /* Font Awesome image icon (you need Font Awesome for this) */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 40px;
+            color: #ccc;
+            /* Light gray color for the icon */
+        }
 
 
 
 
 
-          
-      .product-card {
-          background: white;
-          border-radius: 10px;
-          overflow: hidden;
-          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-          max-width: 80%;
-          min-width: 90%;
-      }
 
-      .product-card img {
-          width: 100%;
-          height: auto;
-      }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+            min-width: 90%;
+        }
 
-      .card-body {
-          padding: 15px;
-      }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
 
-      .product-title {
-          font-size: 1.3rem;
-          font-weight: bold;
-      }
+        .card-body {
+            padding: 15px;
+        }
 
-      .product-description {
-          font-size: 0.9rem;
-          color: gray;
-      }
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
 
-      .price-section {
-          display: flex;
-          justify-content: space-between;
-          font-size: 1.1rem;
-          font-weight: bold;
-      }
+        .product-description {
+            font-size: 0.9rem;
+            color: gray;
+        }
 
-      .old-price {
-          text-decoration: line-through;
-          color: red;
-      }
+        .price-section {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
 
-      .new-price {
-          color: #ff9800;
-      }
+        .old-price {
+            text-decoration: line-through;
+            color: red;
+        }
 
-      /* Responsive Design */
-      @media (max-width: 992px) {
-          .container-fluid {
-              flex-direction: column;
-              height: auto;
-          }
+        .new-price {
+            color: #ff9800;
+        }
 
-          .col-md-6 {
-              width: 100%;
-          }
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .container-fluid {
+                flex-direction: column;
+                height: auto;
+            }
 
-          .form-section {
-              height: auto;
-          }
+            .col-md-6 {
+                width: 100%;
+            }
 
-          .product-card {
-              max-width: 90%;
-          }
-      }
+            .form-section {
+                height: auto;
+            }
 
-      @media (max-width: 768px) {
-          .container-fluid {
-              flex-direction: column;
-          }
+            .product-card {
+                max-width: 90%;
+            }
+        }
 
-          .vh-100 {
-              height: auto !important;
-          }
+        @media (max-width: 768px) {
+            .container-fluid {
+                flex-direction: column;
+            }
 
-          .col-md-6 {
-              width: 100%;
-          }
+            .vh-100 {
+                height: auto !important;
+            }
 
-          .form-container {
-              max-height: none;
-              overflow-y: visible;
-          }
+            .col-md-6 {
+                width: 100%;
+            }
 
-          .form-section {
-              padding: 20px;
-          }
+            .form-container {
+                max-height: none;
+                overflow-y: visible;
+            }
 
-          .form-container {
-              max-height: none;
-              overflow-y: visible;
-              padding: 15px;
-          }
+            .form-section {
+                padding: 20px;
+            }
 
-          .upload-box {
-              padding: 15px;
-          }
+            .form-container {
+                max-height: none;
+                overflow-y: visible;
+                padding: 15px;
+            }
 
-          .btn {
-              font-size: 1rem;
-              padding: 8px 15px;
-          }
+            .upload-box {
+                padding: 15px;
+            }
 
-          .product-card {
-              width: 100%;
-              box-shadow: none;
-          }
+            .btn {
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
 
-          .product-description {
-              font-size: 0.85rem;
-          }
+            .product-card {
+                width: 100%;
+                box-shadow: none;
+            }
 
-          .price-section {
-              font-size: 1rem;
-          }
-      }
+            .product-description {
+                font-size: 0.85rem;
+            }
 
-      @media (max-width: 480px) {
-          .form-section h2 {
-              font-size: 1.5rem;
-          }
+            .price-section {
+                font-size: 1rem;
+            }
+        }
 
-          .form-label {
-              font-size: 0.9rem;
-          }
+        @media (max-width: 480px) {
+            .form-section h2 {
+                font-size: 1.5rem;
+            }
 
-          .form-control {
-              font-size: 0.85rem;
-          }
+            .form-label {
+                font-size: 0.9rem;
+            }
 
-          .upload-box {
-              font-size: 0.9rem;
-          }
+            .form-control {
+                font-size: 0.85rem;
+            }
 
-          .product-title {
-              font-size: 1.1rem;
-          }
+            .upload-box {
+                font-size: 0.9rem;
+            }
 
-          .product-description {
-              font-size: 0.8rem;
-          }
+            .product-title {
+                font-size: 1.1rem;
+            }
 
-          .price-section {
-              font-size: 0.9rem;
-          }
-      }
+            .product-description {
+                font-size: 0.8rem;
+            }
+
+            .price-section {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -394,8 +421,7 @@
                         <button onclick="backStep()" class="btn back-btn"><span class="material-symbols-outlined icon">
                                 arrow_left
                             </span>Back</button>
-                        <button type="submit" class="btn next-btn">Next <span
-                                class="icon">arrow_right</span></button>
+                        <button type="submit" class="btn next-btn">Next <span class="icon">arrow_right</span></button>
                     </div>
                 </form>
             </div>
@@ -431,14 +457,14 @@
             document.getElementById('displayProductDescription').innerText = this.value;
         });
 
-         document.getElementById("productForm").addEventListener("submit", function (event) {
-                if (!this.checkValidity()) {
-                    event.preventDefault();
-                } else {
-                    event.preventDefault();
-                    nextStep();
-                }
-            });
+        document.getElementById("productForm").addEventListener("submit", function (event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+            } else {
+                event.preventDefault();
+                nextStep();
+            }
+        });
 
         // Load and Display Image
         function loadImage(event) {
