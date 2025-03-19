@@ -19,22 +19,55 @@
  }
 
  /* Navigation Bar */
+ /* Navigation Bar */
  .navbar {
      background-color: #333;
-     overflow: hidden;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 20px;
+ }
+
+ /* Navigation Links */
+ .nav-links {
+     display: flex;
  }
 
  .navbar a {
-     float: left;
-     display: block;
      color: white;
-     text-align: center;
-     padding: 14px 20px;
      text-decoration: none;
+     padding: 10px 15px;
  }
 
  .navbar a:hover {
      background-color: #575757;
+ }
+
+ /* Search Bar */
+ .search-bar {
+     display: flex;
+     gap: 20px;
+ }
+
+ .search-input {
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 35px;
+     outline: 0;
+     width: 230px;
+ }
+
+ .search-btn {
+     padding: 8px 12px;
+     background-color: #575757;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ .search-btn:hover {
+     background-color: #777;
  }
 
  /* Hero Section */
@@ -110,6 +143,9 @@
      color: #666;
  }
 
+
+
+
  /* Deals Section */
  .deals-section {
      background-color: #f1f1f1;
@@ -169,4 +205,90 @@
      .category-card p {
          font-size: 0.9rem;
      }
+
+
+     .search-bar {
+         gap: 10px;
+     }
+
+     .search-input {
+         width: 150px;
+         padding: 6px;
+     }
+
+     .search-btn {
+         padding: 6px 10px;
+         font-size: 0.9rem;
+     }
+
+
+
+                 .navbar {
+                     flex-direction: column;
+                     align-items: flex-start;
+                 }
+        
+                 .nav-links {
+                     flex-direction: column;
+                     width: 100%;
+                 }
+        
+                 .navbar a {
+                     padding: 10px;
+                     width: 100%;
+                     text-align: left;
+                 }
  }
+
+
+@media (max-width: 480px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .search-btn {
+        width: 100%;
+        padding: 5px;
+    }
+
+         .navbar {
+             padding: 5px;
+         }
+    
+         .nav-links {
+             display: none;
+             flex-direction: column;
+             width: 100%;
+         }
+    
+         .navbar a {
+             padding: 8px;
+             font-size: 0.9rem;
+         }
+    
+         .navbar.active .nav-links {
+             display: flex;
+         }
+}
+
+
+@media (max-width: 1024px) {
+    .search-input {
+        width: 180px;
+    }
+
+                .navbar {
+                    padding: 10px;
+                }
+        
+                .navbar a {
+                    padding: 8px 12px;
+                }
+}
